@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DVD Bounce Loading Screen</title>
-    <style>
-        canvas {
-            border: 1px solid black;
-        }
-    </style>
+  <title>DVD Loader</title>
 </head>
 <body>
-    <canvas id="dvdCanvas" width="800" height="600"></canvas>
-    <script src="screensaver.js"></script>
+
+  <canvas id="dvdCanvas"></canvas>
+
+  <!-- Import DVDLoader.js -->
+  <script src="screensaver.js"></script> 
+
+  <script>
+    const canvas = document.getElementById('dvdCanvas');
+    canvas.width = window.innerWidth; 
+    canvas.height = window.innerHeight;
+    
+    const loader = new DVDLoader('dvdCanvas');
+  </script>
+
 </body>
 </html>
